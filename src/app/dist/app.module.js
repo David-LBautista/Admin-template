@@ -11,9 +11,9 @@ var platform_browser_1 = require("@angular/platform-browser");
 var core_1 = require("@angular/core");
 var app_routing_module_1 = require("./app-routing.module");
 var pages_module_1 = require("./pages/pages.module");
+var auth_module_1 = require("./auth/auth.module");
 var app_component_1 = require("./app.component");
 var nopagefound_component_1 = require("./pages/nopagefound/nopagefound.component");
-var auth_module_1 = require("./auth/auth.module");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
