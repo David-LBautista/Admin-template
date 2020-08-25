@@ -15,13 +15,18 @@ var register_component_1 = require("./auth/register/register.component");
 var progress_component_1 = require("./pages/progress/progress.component");
 var grafica1_component_1 = require("./pages/grafica1/grafica1.component");
 var nopagefound_component_1 = require("./pages/nopagefound/nopagefound.component");
+var pages_component_1 = require("./pages/pages.component");
 var routes = [
-    { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
+    { path: '',
+        component: pages_component_1.PagesComponent,
+        children: [
+            { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
+            { path: 'progress', component: progress_component_1.ProgressComponent },
+            { path: 'grafica1', component: grafica1_component_1.Grafica1Component },
+            { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+        ] },
     { path: 'login', component: login_component_1.LoginComponent },
     { path: 'register', component: register_component_1.RegisterComponent },
-    { path: 'progress', component: progress_component_1.ProgressComponent },
-    { path: 'grafica1', component: grafica1_component_1.Grafica1Component },
-    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: '**', component: nopagefound_component_1.NopagefoundComponent },
 ];
 var AppRoutingModule = /** @class */ (function () {
